@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');</style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Restaurant Feedback Form</h1>
+            <p id="description" class="description text-center" >
+                Thank you for taking the time to help us improve !
+            </p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter for Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> 
+            </div>
+            <div class="form-group">
+                <label for="age" id="age">Age</label>
+                <input type="number" id="age" class="form-control" placeholder="Enter your age" min="10" max="99" required >
+            </div>
+            <div class="form-group">
+                <p>How many of you are dining ?</p>
+                <select name="role" id="dropdown" class="form-control" style="height: 40px" required>
+                    <option disabled selected value>Select Group size</option>
+                    <option value="individual">individual (one person)</option>
+                    <option value="couple">Couple </option>
+                    <option value="smallgroup">Small Group (3-4 people) </option>
+                    <option value="largegroup">Large Group (more than 4 people) </option>
+                    <option value="prefernot">Prefer Not To Say</option>
+                </select>
+                
+            </div>
+            <div class="form-group">
+                <p>Would you recommend our restaurant to a friend?</p>
+                <label >
+                    <input type="radio" name="user-recommend" value="definitely" class="input-radio" checked/> Definitely
+                </label>
+                <label >
+                    <input type="radio" name="user-recommend" value="maybe" class="input-radio" checked/> Maybe
+                </label>
+                <label ></label>
+                    <input type="radio" name="user-recommend" value="not-sure" class="input-radio" checked/> Not sure
+                </label>
+            </div>
+            <div class="form-group">
+                <p>what is your favortie feature of our restaurant?</p>
+                <select name="most-like" id="most-like" class="form-control" style="height: 40px" required>
+                    <option disabled selected value>Select An option</option>
+                    <option value="food">Food</option>
+                    <option value="ambience">Ambience</option>
+                    <option value="service">Service</option>
+                    <option value="menu">Menu</option> 
+                    <option value="price">Price and offers</option>
+
+                </select>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
